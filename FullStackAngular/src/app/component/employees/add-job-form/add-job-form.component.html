@@ -1,0 +1,711 @@
+
+<div class="outer">
+    <form class="container  col-sm-6"
+    #form="ngForm" (ngSubmit)="addJobFormCompo()">
+       <div class="container my-5" >
+           <h1 class="mb-3">Add New Employee</h1>
+       </div>
+       
+       <div class="mb-3">
+         <label for="mobile" class="form-label">Mobile Number</label>
+         <input type="number"
+         name="MobileNumber" [(ngModel)]="addJobFormRequest.MobileNumber"
+          class="form-control" id="mobile" aria-describedby="emailHelp">
+        </div>
+   
+        <div class="mb-3">
+           <label for="name" class="form-label">Name</label>
+           <input type="text"
+           name="Name" [(ngModel)]="addJobFormRequest.Name"
+           class="form-control" id="name" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="name" class="form-label">Father Name</label>
+           <input type="text"
+           name="FatherName" [(ngModel)]="addJobFormRequest.FatherName"
+           class="form-control" id="FatherName" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="name" class="form-label">Mother Name</label>
+           <input type="text"
+           name="MotherName" [(ngModel)]="addJobFormRequest.MotherName"
+           class="form-control" id="MotherName" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="Nid" class="form-label">NID</label>
+           <input type="number"
+           name="Nid" [(ngModel)]="addJobFormRequest.Nid"
+           class="form-control" id="Nid" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="DateOfBirth" class="form-label">Date Of Birth</label>
+           <input type="date" 
+           name="DateOfBirth" [(ngModel)]="addJobFormRequest.DateOfBirth"
+           class="form-control" id="DateOfBirth" aria-describedby="emailHelp">
+          </div>
+   
+        <div class="mb-3">
+           <label for="BirthPlace" class="form-label">Birth Place</label>
+           <input type="text" DateOfBirth
+           name="BirthPlace" [(ngModel)]="addJobFormRequest.BirthPlace"
+           class="form-control" id="BirthPlace" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="Religion" class="form-label">Religion</label>
+           <input type="text"
+           name="Religion" [(ngModel)]="addJobFormRequest.Religion"
+           class="form-control" id="Religion" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="BloodGroup" class="form-label">Blood Group</label>
+           <input type="text"
+           name="BloodGroup" [(ngModel)]="addJobFormRequest.BloodGroup"
+           class="form-control" id="BloodGroup" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="MaritalStatus" class="form-label">Marital Status</label>
+           <input type="text"
+           name="MaritalStatus" [(ngModel)]="addJobFormRequest.MaritalStatus"
+           class="form-control" id="MaritalStatus" aria-describedby="emailHelp">
+          </div>
+   
+   
+          <div class="mb-3">
+           <label for="MaritalStatus" class="form-label">Email Address</label>
+           <input type="email"
+           name="Email" [(ngModel)]="addJobFormRequest.Email"
+           class="form-control" id="Email" aria-describedby="emailHelp">
+          </div>
+          
+          <div class="Address">
+           <h1>Address</h1>
+           <div class="AddressDetails">
+               <h3>Present Address</h3>
+               <div class="presentAddress">
+                   <tr>
+                       <td>
+                           <div class="mb-3">
+                               <label for="Village" class="form-label">Village</label>
+                               <input type="text"
+                               name="PeVillage" [(ngModel)]="addJobFormRequest.Address.presentAddress.Village"
+                               class="form-control" id="Village" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="PostOffice" class="form-label">Post Office</label>
+                               <input type="text"
+                               name="PePostOffice" [(ngModel)]="addJobFormRequest.Address.presentAddress.PostOffice"
+                               class="form-control" id="PostOffice" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="PoliceStation" class="form-label">Police Station</label>
+                               <input type="text"
+                               name="PePoliceStation" [(ngModel)]="addJobFormRequest.Address.presentAddress.PoliceStation"
+                               class="form-control" id="PoliceStation" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="District" class="form-label">District</label>
+                               <input type="text"
+                               name="PeDistrict" [(ngModel)]="addJobFormRequest.Address.presentAddress.District"
+                               class="form-control" id="District" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                   </tr>
+               </div>
+               
+                       <h3>Parmanent Address</h3>
+               <div class="ParmanentAddress">
+                   <tr>
+                       <td>
+                           <div class="mb-3">
+                               <label for="Village" class="form-label">Village</label>
+                               <input type="text"
+                               name="PaVillage" [(ngModel)]="addJobFormRequest.Address.ParmanentAddress.Village"
+                               class="form-control" id="Village" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="PostOffice" class="form-label">Post Office</label>
+                               <input type="text"
+                               name="PaPostOffice" [(ngModel)]="addJobFormRequest.Address.ParmanentAddress.PostOffice"
+                               class="form-control" id="PostOffice" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="PoliceStation" class="form-label">Police Station</label>
+                               <input type="text"
+                               name="PaPoliceStation" [(ngModel)]="addJobFormRequest.Address.ParmanentAddress.PoliceStation"
+                               class="form-control" id="PoliceStation" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="District" class="form-label">District</label>
+                               <input type="text"
+                               name="PaDistrict" [(ngModel)]="addJobFormRequest.Address.ParmanentAddress.District"
+                               class="form-control" id="District" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                   </tr>
+               </div>
+           </div>
+          </div>
+   
+   
+   
+   
+          
+   
+         
+   
+         
+           <div class="mb-3">
+           <label for="AppliedPost" class="form-label">Applied Post</label>
+           <input type="date"
+           name="InterviewDare" [(ngModel)]="addJobFormRequest.InterviewDare"
+           class="form-control" id="InterviewDare" aria-describedby="emailHelp">
+          </div>
+         
+   
+          <div class="mb-3">
+           <label for="AppliedPost" class="form-label">Applied Post</label>
+           <input type="text"
+           name="AppliedPost" [(ngModel)]="addJobFormRequest.AppliedPost"
+           class="form-control" id="InterviewDare" aria-describedby="emailHelp">
+          </div>
+   
+   
+          <div class="mb-3">
+           <label for="JoiningDate" class="form-label">Probably Joining Date</label>
+           <input type="date"
+           name="JoiningDate" [(ngModel)]="addJobFormRequest.JoiningDate"
+           class="form-control" id="JoiningDate" aria-describedby="emailHelp">
+          </div>
+   
+          <div class="mb-3">
+           <label for="ExpectedSelary" class="form-label">Expected Selary</label>
+           <input type="number"
+           name="ExpectedSelary" [(ngModel)]="addJobFormRequest.ExpectedSelary"
+           class="form-control" id="ExpectedSelary" aria-describedby="emailHelp">
+          </div>
+   
+   
+          <div class="mb-3">
+           <label for="AppliedBy" class="form-label">Applied By</label>
+           <input type="text"
+           name="AppliedBy" [(ngModel)]="addJobFormRequest.AppliedBy"
+           class="form-control" id="MaritalStatus" aria-describedby="emailHelp">
+          </div>
+   
+    <div class="accademocQlf">
+       <h1>AccademicQualification</h1>
+       <div class="AcqulaficationDetails">
+           <ol>
+               <li>
+                   <tr>
+                       <td>
+                           <div class="mb-3">
+                               <label for="Degree" class="form-label">Degree</label>
+                               <input type="text"
+                               name="Degree" [(ngModel)]="addJobFormRequest.AccademicQualification.Degree"
+                               class="form-control" id="Degree" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="University" class="form-label">University</label>
+                               <input type="text"
+                               name="University" [(ngModel)]="addJobFormRequest.AccademicQualification.University"
+                               class="form-control" id="University" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="Instution" class="form-label">Instution</label>
+                               <input type="text"
+                               name="Instution" [(ngModel)]="addJobFormRequest.AccademicQualification.Instution"
+                               class="form-control" id="Instution" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="Major" class="form-label">Major</label>
+                               <input type="text"
+                               name="Major" [(ngModel)]="addJobFormRequest.AccademicQualification.Major"
+                               class="form-control" id="Major" aria-describedby="emailHelp">
+                              </div>
+           
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               <label for="Result" class="form-label">Result</label>
+                               <input type="number"
+                               name="Result" [(ngModel)]="addJobFormRequest.AccademicQualification.Result"
+                               class="form-control" id="Result" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+           
+                       <td>
+                           <div class="mb-3">
+                               <label for="PassingYear" class="form-label">PassingYear</label>
+                               <input type="date"
+                               name="PassingYear" [(ngModel)]="addJobFormRequest.AccademicQualification.PassingYear"
+                               class="form-control" id="PassingYear" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                   </tr>
+               </li>
+               <li>
+                   <tr>
+                       <td>
+                           <div class="mb-3">
+                              
+                               <input type="text"
+                               name="Degree" [(ngModel)]="addJobFormRequest.AccademicQualification.Degree"
+                               class="form-control" id="Degree" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                              
+                               <input type="text"
+                               name="University" [(ngModel)]="addJobFormRequest.AccademicQualification.University"
+                               class="form-control" id="University" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               
+                               <input type="text"
+                               name="Instution" [(ngModel)]="addJobFormRequest.AccademicQualification.Instution"
+                               class="form-control" id="Instution" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                              
+                               <input type="text"
+                               name="Major" [(ngModel)]="addJobFormRequest.AccademicQualification.Major"
+                               class="form-control" id="Major" aria-describedby="emailHelp">
+                              </div>
+           
+                       </td>
+                       <td>
+                           <div class="mb-3">
+                               
+                               <input type="number"
+                               name="Result" [(ngModel)]="addJobFormRequest.AccademicQualification.Result"
+                               class="form-control" id="Result" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+           
+                       <td>
+                           <div class="mb-3">
+                              
+                               <input type="date"
+                               name="PassingYear" [(ngModel)]="addJobFormRequest.AccademicQualification.PassingYear"
+                               class="form-control" id="PassingYear" aria-describedby="emailHelp">
+                              </div>
+                       </td>
+                   </tr>
+               </li>
+               <li>
+                <tr>
+                    <td>
+                        <div class="mb-3">
+                           
+                            <input type="text"
+                            name="Degree" [(ngModel)]="addJobFormRequest.AccademicQualification.Degree"
+                            class="form-control" id="Degree" aria-describedby="emailHelp">
+                           </div>
+                    </td>
+                    <td>
+                        <div class="mb-3">
+                           
+                            <input type="text"
+                            name="University" [(ngModel)]="addJobFormRequest.AccademicQualification.University"
+                            class="form-control" id="University" aria-describedby="emailHelp">
+                           </div>
+                    </td>
+                    <td>
+                        <div class="mb-3">
+                            
+                            <input type="text"
+                            name="Instution" [(ngModel)]="addJobFormRequest.AccademicQualification.Instution"
+                            class="form-control" id="Instution" aria-describedby="emailHelp">
+                           </div>
+                    </td>
+                    <td>
+                        <div class="mb-3">
+                           
+                            <input type="text"
+                            name="Major" [(ngModel)]="addJobFormRequest.AccademicQualification.Major"
+                            class="form-control" id="Major" aria-describedby="emailHelp">
+                           </div>
+        
+                    </td>
+                    <td>
+                        <div class="mb-3">
+                            
+                            <input type="number"
+                            name="Result" [(ngModel)]="addJobFormRequest.AccademicQualification.Result"
+                            class="form-control" id="Result" aria-describedby="emailHelp">
+                           </div>
+                    </td>
+        
+                    <td>
+                        <div class="mb-3">
+                           
+                            <input type="date"
+                            name="PassingYear" [(ngModel)]="addJobFormRequest.AccademicQualification.PassingYear"
+                            class="form-control" id="PassingYear" aria-describedby="emailHelp">
+                           </div>
+                    </td>
+                </tr>
+            </li>
+              
+           </ol>
+       </div>
+    </div>
+   
+         
+   
+   
+       
+   
+   
+      
+   
+   
+        
+   
+         
+   
+          
+   
+   
+       
+  
+        <h1>Work Experience</h1>
+          <div class="exproence">
+         
+           <tr>
+               <td>
+                   <div class="mb-3">
+                       <label for="Post" class="form-label">Post</label>
+                       <input type="text"
+                       name="Post" [(ngModel)]="addJobFormRequest.Post"
+                       class="form-control" id="Post" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                       <label for="Organization" class="form-label">Organization</label>
+                       <input type="text"
+                       name="Organization" [(ngModel)]="addJobFormRequest.Organization"
+                       class="form-control" id="Organization" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                       <label for="JobLocation" class="form-label">Job Location</label>
+                       <input type="text"
+                       name="JobLocation" [(ngModel)]="addJobFormRequest.JobLocation"
+                       class="form-control" id="JobLocation" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                       <label for="Selary" class="form-label">Selary</label>
+                       <input type="number"
+                       name="Selary" [(ngModel)]="addJobFormRequest.Selary"
+                       class="form-control" id="Selary" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                       <label for="ReportingTo" class="form-label">Reporting To</label>
+                       <input type="text"
+                       name="ReportingTo" [(ngModel)]="addJobFormRequest.ReportingTo"
+                       class="form-control" id="ReportingTo" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                       <label for="DefaultProduct" class="form-label"> Product</label>
+                       <input type="text"
+                       name="DefaultProduct" [(ngModel)]="addJobFormRequest.DefaultProduct"
+                       class="form-control" id="DefaultProduct" aria-describedby="emailHelp">
+                      </div> 
+                   </td>
+           </tr>
+   
+           <tr>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Post" [(ngModel)]="addJobFormRequest.Post"
+                       class="form-control" id="Post" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Organization" [(ngModel)]="addJobFormRequest.Organization"
+                       class="form-control" id="Organization" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                     
+                       
+                       <input type="text"
+                       name="JobLocation" [(ngModel)]="addJobFormRequest.JobLocation"
+                       class="form-control" id="JobLocation" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                   
+                       
+                       <input type="number"
+                       name="Selary" [(ngModel)]="addJobFormRequest.Selary"
+                       class="form-control" id="Selary" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                     
+                       <input type="text"
+                       name="ReportingTo" [(ngModel)]="addJobFormRequest.ReportingTo"
+                       class="form-control" id="ReportingTo" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                      
+                       <input type="text"
+                       name="DefaultProduct" [(ngModel)]="addJobFormRequest.DefaultProduct"
+                       class="form-control" id="DefaultProduct" aria-describedby="emailHelp">
+                      </div> 
+                   </td>
+           </tr>
+           <tr>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Post" [(ngModel)]="addJobFormRequest.Post"
+                       class="form-control" id="Post" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Organization" [(ngModel)]="addJobFormRequest.Organization"
+                       class="form-control" id="Organization" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                     
+                       
+                       <input type="text"
+                       name="JobLocation" [(ngModel)]="addJobFormRequest.JobLocation"
+                       class="form-control" id="JobLocation" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                   
+                       
+                       <input type="number"
+                       name="Selary" [(ngModel)]="addJobFormRequest.Selary"
+                       class="form-control" id="Selary" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                     
+                       <input type="text"
+                       name="ReportingTo" [(ngModel)]="addJobFormRequest.ReportingTo"
+                       class="form-control" id="ReportingTo" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                      
+                       <input type="text"
+                       name="DefaultProduct" [(ngModel)]="addJobFormRequest.DefaultProduct"
+                       class="form-control" id="DefaultProduct" aria-describedby="emailHelp">
+                      </div> 
+                   </td>
+           </tr>
+           <tr>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Post" [(ngModel)]="addJobFormRequest.Post"
+                       class="form-control" id="Post" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Organization" [(ngModel)]="addJobFormRequest.Organization"
+                       class="form-control" id="Organization" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                     
+                       
+                       <input type="text"
+                       name="JobLocation" [(ngModel)]="addJobFormRequest.JobLocation"
+                       class="form-control" id="JobLocation" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                   
+                       
+                       <input type="number"
+                       name="Selary" [(ngModel)]="addJobFormRequest.Selary"
+                       class="form-control" id="Selary" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                     
+                       <input type="text"
+                       name="ReportingTo" [(ngModel)]="addJobFormRequest.ReportingTo"
+                       class="form-control" id="ReportingTo" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                      
+                       <input type="text"
+                       name="DefaultProduct" [(ngModel)]="addJobFormRequest.DefaultProduct"
+                       class="form-control" id="DefaultProduct" aria-describedby="emailHelp">
+                      </div> 
+                   </td>
+           </tr>
+           <tr>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Post" [(ngModel)]="addJobFormRequest.Post"
+                       class="form-control" id="Post" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                      
+                       
+                       <input type="text"
+                       name="Organization" [(ngModel)]="addJobFormRequest.Organization"
+                       class="form-control" id="Organization" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                     
+                       
+                       <input type="text"
+                       name="JobLocation" [(ngModel)]="addJobFormRequest.JobLocation"
+                       class="form-control" id="JobLocation" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                   
+                       
+                       <input type="number"
+                       name="Selary" [(ngModel)]="addJobFormRequest.Selary"
+                       class="form-control" id="Selary" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+               <td>
+                   <div class="mb-3">
+                     
+                       <input type="text"
+                       name="ReportingTo" [(ngModel)]="addJobFormRequest.ReportingTo"
+                       class="form-control" id="ReportingTo" aria-describedby="emailHelp">
+                      </div>
+                   </td>
+   
+               <td>
+                   <div class="mb-3">
+                      
+                       <input type="text"
+                       name="DefaultProduct" [(ngModel)]="addJobFormRequest.DefaultProduct"
+                       class="form-control" id="DefaultProduct" aria-describedby="emailHelp">
+                      </div> 
+                   </td>
+           </tr>
+   
+           
+   
+          
+      
+          </div>
+   
+          
+   
+          
+     
+         
+   
+        
+   
+         
+       
+   
+         
+       
+       <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+</div>
+
